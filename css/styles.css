@@ -1,0 +1,1226 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+    background-color: #F2F1EC;
+    font-family: 'KoHo', sans-serif;
+    overflow-x: hidden;
+}
+h2 {
+	font-family: KoHo;
+	font-weight: 600;
+	line-height: 56px;
+	font-size: 48px;
+	text-align: center;
+	color: #8C288C;
+	padding-bottom: 40px;
+}
+h3 {
+	font-style: normal;
+	font-weight: 600;
+	line-height: 32px;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #8C288C;
+	margin-bottom: 24px;
+}
+h4 {
+	line-height: 32px;
+	font-size: 24px;
+	text-align: center;
+	font-family: KoHo;
+	color: #222222;
+	font-weight: 400;
+}
+h5 {
+	line-height: 32px;
+	font-size: 24px;
+		font-family: KoHo;
+	color: #8C288C;
+	font-weight: 600;
+}
+p {
+	font-family: KoHo;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 24px;
+	font-size: 16px;
+	color: #222222;
+}
+
+/********************* NAVIGATION -*********************/
+
+.top-nav {
+	width: 100%;
+	height: 100px;
+	background-color: #F2F1EC;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.spacer {
+	width: 100%;
+	height: 80px;
+	background-color: #F2F1EC;
+	position: relative;
+}
+.top-nav-content {
+	width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-nav-content ul {
+	color: #000;
+	font-size: 16px;
+	display: flex;
+	flex-direction: row;
+}
+.top-nav-content ul li {
+	padding: 15px 10px 15px 35px;
+}
+.top-nav-content ul li a {
+	text-decoration: none;
+	color: #222222;
+
+}
+.top-nav-content ul li a:hover {
+	font-weight: 600;
+	color: #8C288C;
+}
+.leit {
+	display: flex;
+	align-self: flex-end;
+	align-items: center;
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+}
+.leit img {
+	margin: 0 auto;
+	height: 35px;
+	width: auto;
+}
+.nav-list .hamburger {
+    display: none;
+}
+/********************** HAMBORGARAMENU **********************/
+
+/* .hamburgermenu {
+	width: 100vw;
+	height: 100vh;
+	background-color: #8C288C;
+	padding: 15%;
+	display: none;
+}
+.hamburgermenu-logo-container {
+	display: flex;
+	height: 80px;
+	width: 100%;
+	margin-bottom: 80px;
+	align-content: center;
+}
+.hamburgermenu-logo-container img {
+	margin: 0 auto;
+}
+.hamburgermenu-leit {
+	display: flex;
+	height: 56px;
+	width: 100%;
+	margin-bottom: 100px;
+	background-color: #fff;
+	align-content: center;
+}
+.hamburgermenu-leit input {
+	display: flex;
+	height: 100%;
+	width: 80%;
+	text-indent: 10px;
+	font-family: KoHo;
+	font-size: 14px;
+}
+.hamburgermenu-leit .leit-container {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	height: 56px;
+	height: 56px;
+}
+.hamburgermenu-leit img {
+	height: 50%;
+}
+.hamburgermenu-content ul li a {
+	text-decoration: none;
+	color: #F2F1EC;
+	line-height: 48px;
+	font-weight: 600;
+	font-size: 16px;
+} */
+/********************** HAMBORGARAMENU ENDAR **********************/
+
+/********************** HAMBORGARAMENU TEST BYRJAR **********************/
+.hamburgermenu {
+	width: 100vw;
+	height: 100vh;
+	background-color: #8C288C;
+	padding: 15%;
+	display: none;
+}
+.hamburgermenu-logo-container {
+	display: flex;
+	height: 80px;
+	width: 100%;
+	margin-bottom: 80px;
+	align-content: center;
+}
+.hamburgermenu-logo-container img {
+	margin: 0 auto;
+}
+.hamburgermenu-leit {
+	display: flex;
+	height: 56px;
+	width: 100%;
+	margin-bottom: 100px;
+	background-color: #fff;
+	align-content: center;
+}
+.hamburgermenu-leit input {
+	display: flex;
+	height: 100%;
+	width: 80%;
+	text-indent: 10px;
+	font-family: KoHo;
+	font-size: 14px;
+}
+.hamburgermenu-leit .leit-container {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	height: 56px;
+	height: 56px;
+}
+.hamburgermenu-leit img {
+	height: 50%;
+}
+.hamburgermenu-content ul li a {
+	text-decoration: none;
+	color: #F2F1EC;
+	line-height: 48px;
+	font-weight: 600;
+	font-size: 16px;
+}
+.close{
+    cursor: pointer;
+}
+.show-menu{
+    width: 100%;
+    visibility: visible;
+}
+.tilt-right{
+    transform:rotate(45deg);
+}
+.tilt-left{
+    transform:rotate(-45deg);
+}
+.change-to-x{
+    position: absolute;
+}
+/********************** HAMBORGARAMENU TEST ENDAR **********************/
+
+/********************* BANNERINN *********************/
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	align-content: center;
+}
+.main-banner {
+	position: relative;
+	margin: 64px 0 0 0;
+}
+.bannermynd {
+	width: 956px;
+	height: 645px;
+}
+.bannermynd img {
+	height: 100%;
+}
+.main-txt-holder { 
+	position: absolute;
+	width: 524px;
+	right: 0px;
+	top: 65px;
+}
+h1 {
+	width: 524px;
+	left: 836px;
+	top: 207px;
+	font-weight: 700;
+	line-height: 140px;
+	font-size: 144px;
+	text-transform: uppercase;
+	color: #8C288C;
+}
+.skraut-texti {
+	font-family: 'Dawning of a New Day', cursive;
+	line-height: 60px;
+	font-size: 64px;
+	color: #8C288C;
+	padding-top: 24px;
+}
+.divider {
+	width: 632px;
+	height: 1px;
+	background-color: #330033;
+	margin: 80px auto;
+}
+
+/********************* STUNDASKRÁ *********************/
+
+.stundaskra {
+	max-width: 1064px;
+	margin: 40px auto;
+}
+.vikudagar {
+    width: 100%;
+    max-width: 848px;
+    margin: 40px auto;
+}
+.vikudagar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.vikudagar ul li {
+	font-weight: 600;
+	color: #8C288C;
+	padding: 16px;
+}
+.vikudagar ul li:hover {
+	border: 0.5px solid #8C288C;
+}
+.vikudagar ul li.active {
+	border: 0.5px solid #8C288C
+}
+.stundaskra-forsida-container {
+	width: 100%;
+	max-width: 1064px;
+	margin: 0 auto;
+}
+table {
+	width: 100%;
+	background-color: white;
+	border: 0.5px solid #222222;
+}
+table thead {
+	line-height: 48px;
+	color: #222222;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-bottom: 0.5px solid #222222;
+}
+table tbody td {
+	text-align: center;
+	border-right: 0.5px solid #222222;
+	vertical-align: middle;
+}
+table tbody tr {
+	height: 65px;
+	justify-content: center;
+	border-bottom: 0.5px solid #222222;
+}
+.skoda_nanar {
+	font-size: 14px;
+}
+.skoda_nanar:hover {
+	color: #F2F1EC;
+	font-weight: 600;
+	background-color: #8C288C; 
+}
+.timi_typa {
+	color: #8C288C;
+	font-weight: 600;
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.5px solid #8C288C;
+	width: 200px;
+	height: 80px;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	color: #8C288C;
+	margin: 40px auto;
+}
+.btn:hover {
+	color: #F2F1EC;
+	background-color: #8C288C;
+}
+
+/********************* CARDS *********************/
+
+.card-holder {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.card-holder .card {
+	position: relative;
+	width: 308px;
+	height: 467px;
+	background-color: #ffffff;
+	margin-bottom: 56px;
+	margin-right: 16px;
+}
+.card-holder .card:nth-child(4n){
+	margin-right: 0px;
+}
+.card:hover {
+	box-shadow: 0 30px 20px #B7B7B5;
+}
+.card-holder .card .opid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 52px;
+	height: 40px;
+	right: 0;
+	top: 180px;
+	color: #F2F1EC;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: #8C288C;
+	z-index: 1;
+}
+.card-holder .card .lokad {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 52px;
+	height: 40px;
+	right: 0;
+	top: 180px;
+	color: #F2F1EC;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: #AA623C;
+	z-index: 1;
+}
+.card-holder .card img {
+	width: 308px;
+	height: 200px;
+}
+.card-text-holder {
+	margin: 40px 24px 0;
+}
+.btn-holder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.btn-holder a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.5px solid #8C288C;
+	width: 122px;
+	height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: #8C288C;
+	margin-top: 32px;
+}
+.btn-holder a:hover {
+	border: 0.5px solid #8C288C;
+	background-color: #8C288C;
+	color: #F2F1EC;
+}
+.btn-holder .skra {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 122px;
+	height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 32px;
+	border: 0.5px solid #AA623C;
+	color: #AA623C;
+}
+.btn-holder .skra:hover {
+	border: 0.5px solid #AA623C;
+	background-color: #AA623C;
+	color: #F2F1EC;
+}
+
+/********************* EVENTS *********************/
+
+.event-container {
+	position: relative;
+	max-width: 1064px;
+	margin: 0 auto;
+}
+.vidburdur-mynd {
+	height: 540px;
+	width: auto;
+	left: 0;
+}
+.vidburdur-mynd img{
+	height: 100%;
+}
+.vidburdur-info {
+	position: absolute;
+	width: 632px;
+	height: 404px;
+	right: 0;
+	top: 56px;
+	background-color: #8C288C;
+	box-sizing: border-box;
+	padding: 40px;
+}
+.vidburdur-info h3 {
+	font-style: normal;
+	font-weight: 600;
+	line-height: 32px;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #F2F1EC;
+	margin-bottom: 24px;
+}
+.vidburdur-info p {
+	font-family: KoHo;
+	line-height: 24px;
+	font-size: 18px;
+	color: #F2F1EC;
+	margin-bottom: 40px;
+}
+.vidburdur-info a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.5px solid #F2F1EC;
+	width: 122px;
+	height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: #F2F1EC;
+	margin-top: 32px;
+}
+.vidburdur-info a:hover {
+	color: #8C288C;
+	background-color: #F2F1EC;
+
+}
+
+/********************* BRANDING RIGHT -*********************/
+
+.branding-section-right {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+}
+.branding-section-right .brand-mynd {
+	height: 645px;
+	width: auto;
+	right: 0px;
+}
+.branding-section-right .brand-mynd img{
+	height: 100%;
+}
+.branding-section-right .brand-texti {
+	position: absolute;
+	left: 0;
+	top: 56px;
+}
+
+/********************* ICONS *********************/
+
+.icon-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.icon-section-txt-holder {
+	max-width: 632px;
+	margin: 0 auto;
+}
+.icon-holder {
+	display: flex;
+	justify-content: space-between;
+	margin: 80px 0;
+}
+.icon {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	max-width: 308px;
+}
+.icon img {
+	margin-bottom: 40px;
+}
+
+/********************* SKRÁNING *********************/
+
+.skraning {
+	width: 100%;
+	max-width: 1064px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	margin: 80px auto;
+}
+.skraning-info-holder {
+	width: 100%;
+	max-width: 848px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.btn-skraning {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: KoHo;
+	border: 1px solid #8C288C;
+	width: 318px;
+	height: 80px;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	color: #8C288C;
+	margin: 40px auto;
+}
+.btn-skraning:hover {
+	background-color: #8C288C;
+	color: #F2F1EC;
+}
+
+/********************* PÓSTLISTI *********************/
+
+.btn-postur {
+	font-family: KoHo;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #8C288C;
+	width: 200px;
+	height: 80px;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	color: #F2F1EC;
+}
+.btn-postur:hover {
+	background-color: #F2F1EC;
+	color: #8C288C;
+}
+.postlisti {
+	display: flex;
+	flex-direction: column;
+	background-color: #e0e0e0;
+	margin: 80px auto;
+}
+.postlisti-info-holder {
+	width: 100%;
+	max-width: 848px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.postlistaskraning {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+.postlistaskraning input {
+	width: 632px;
+	height: 80px;
+	text-indent: 24px;
+	font-size: 16px;
+	font-family: KoHo;
+	color: #e5e5e5;
+}
+
+/********************* FOOTER *********************/
+
+.footer-container {
+    position: static; 
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    /* align-items: center; */
+	background-color: #8C288C;
+}
+.footer_content_container {
+	max-width: 1280px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	padding-top: 48px;
+}
+.footer-content-1 {
+	width: 200px;
+	height: 80%;
+}
+.footer-content-2 {
+	width: 416px;
+	height: 80%;
+}
+.footer-content-3 {
+	width: 200px;
+	height: 80%;
+}
+.footer-content-4 {
+	width: 200px;
+	height: 80%;
+}
+.footer-content-5 {
+	width: 200px;
+	height: 80%;
+}
+.footer-content-5 img { 
+	margin: 24px 0 0 56px;
+}
+.footer_content_container div p {
+	color: #F2F1EC;
+}
+.footer_content_container div a {
+	color: #F2F1EC;
+}
+.footer_content_container div a:hover {
+	color: #F2F1EC;
+	font-weight: 600;
+}
+.footer_content_container div span {
+	font-weight: 700;
+}
+.about {
+	width: 308px;
+}
+
+/********************* JÓGATÍMAR STÍLAR *********************/
+
+.filter-namskeid {
+	display: flex;
+}
+.filter-namskeid div {
+	margin: 40px 32px 16px 0;
+}
+.filter-namskeid div p {
+	padding-bottom: 16px;
+	font-weight: 600;
+}
+.filter-namskeid div p.active:hover {
+	border-bottom: 2px solid #8C288C;
+}
+
+/********************* STAKT NÁMSKEIÐ STÍLAR *********************/
+
+/* ----- BRANDING LEFT ----- */
+.branding-section-left {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 auto;
+}
+.branding-section-left .brand-mynd {
+	height: 645px;
+	width: auto;
+	left: 0px;
+}
+.branding-section-left .brand-mynd img{
+	height: 100%;
+}
+.branding-section-left .brand-texti {
+	position: absolute;
+	right: 0;
+	top: 80px;
+}
+/********************* INFO UM NÁMSKEIÐIÐ *********************/
+.namsk-info-container {
+	width: 100%;
+	max-width: 1064px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	margin: 80px auto;
+	padding: 40px 0;
+}
+.two-columns {
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.namsk-info, .namsk-texti {
+	 width: 50%;
+	 margin: 0 10px 0 0;
+}
+.namsk-info span {
+	font-weight: 600;
+}
+.namsk-texti p {
+	text-indent: 10px;
+}
+.divider-small {
+	width: 100%;
+	height: 1px;
+	background-color: #8C288C;
+	margin: 16px 0;
+}
+/********************* UM JÓGASETRIÐ *********************/
+
+.namsk-info img {
+	width: 100%;
+	bottom: 0;
+}
+.card-holder .card-kennari {
+	position: relative;
+	width: 308px;
+	height: 468px;
+	background-color: #F2F1EC;
+	margin-bottom: 56px;
+	margin-right: 16px;
+}
+.card-holder .card-kennari:nth-child(4n){
+	margin-right: 0px;
+}
+.card-holder .card-kennari img {
+	width: 308px;
+	height: 308px;
+}
+.card-kennari-text-holder {
+	margin: 24px;
+}
+
+/******************************************************/
+
+.vidburdir .vidburdur-info{
+	opacity: 0;
+}
+
+.vidburdir.active .vidburdur-info{
+	opacity: 1;
+	transition: .3s;
+}
+
+/********************* HAMBORGARI frá CODE_PEN *********************/
+#nav-icon4 {
+	width: 60px;
+	height: 45px;
+	position: relative;
+	margin: 50px auto;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+  }
+  
+#nav-icon4 span {
+	display: block;
+	position: absolute;
+	height: 9px;
+	width: 100%;
+	background: #d3531a;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+  }
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
+/*************** MEDIA QUERIES max-width:650 ****************/
+					
+/**********************************************************/
+
+@media screen and (max-width: 650px){
+
+	/************ NAVIGATION - MENU ************/
+
+	h2 {
+		font-size: 40px;
+		padding-bottom: 40px;
+	}
+	h4 {
+		line-height: 24px;
+		font-size: 18px;
+	}
+	.top-nav-content ul.nav-list {
+		display: none;
+	}
+	.leit {
+		display: none;
+	}
+	.top-nav-content {
+		justify-content: center;
+	}
+	#nav-icon4 {
+		display: none;
+	}
+	.hamburger-container {
+		position: fixed;
+		bottom: 35px;
+		width: 100%;
+		height: 40px;
+		margin: 0 auto;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		z-index: 2;
+	}
+	.burger {
+		width: 18px;
+		height: 2px;
+		background-color: #F2F1EC;
+		border-radius: 100px;
+		margin: 3px auto;	
+	}
+	 .burgerContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		background-color: #8C288C;
+		box-shadow: 0 4px 9px rgba(0,0,0,0.2);
+		padding: 5px;
+		cursor: pointer;
+		transition: all 2s;
+	 }
+	 /************ BANNERMYNDIN ************/
+
+	
+	 .main-banner {
+		position: relative;
+		margin: 56px 0;
+		height: 500px;
+	}
+	.bannermynd {
+		width: 100%;
+		height: auto;
+		margin: 0;
+	}
+	.bannermynd img {
+		width: 100%;
+
+	}
+	.main-txt-holder {
+		width: 350px;
+		left: 40px;
+	}
+	h1 {
+		line-height: 94px;
+		font-size: 104px;
+	}
+	.skraut-texti {
+		line-height: 40px;
+		font-size: 40px;
+		color: #8C288C;
+	}
+	.divider {
+		width: 350px;
+		height: 1px;
+		background-color: #330033;
+		margin: 40px auto;
+	}
+	/********************* STUNDASKRÁ *********************/
+
+	.stundaskra {
+		max-width: 350px;
+		margin: 40px auto;
+	}
+	.vikudagar {
+		display: none;
+	}
+	.stundaskra-forsida-container {
+		width: 100%;
+		max-width: 1064px;
+		margin: 0 auto;
+	}
+	table {
+		width: 100%;
+		background-color: white;
+		border: 0.5px solid #222222;
+	}
+	table thead {
+		font-size: 12px;
+	}
+	table tbody td {
+		font-size: 12px;
+	}
+	table tbody tr {
+		height: 48px;
+	}
+	.skoda_nanar {
+		font-size: 12px;
+		color: #F2F1EC;
+		font-weight: 600;
+		background-color: #8C288C; 
+
+	}
+	/********************* CARDS *********************/
+	.card-holder .card {
+		position: relative;
+		width: 308px;
+		height: 467px;
+		background-color: #ffffff;
+		margin: 0 auto 24px;
+	}
+	.card-holder .card:nth-child(4n){
+		margin: 0 auto 24px;
+	}
+	.btn {
+		width: 152px;
+		height: 56px;
+		font-size: 16px;
+		margin: 40px auto;
+	}
+	/********************* EVENTS *********************/
+
+	.vidburdur-mynd img {
+		width: 100%;
+		height: auto;
+	}
+	.vidburdur-info {
+		position: absolute;
+		width: 90%;
+		height: auto;
+		right: 16px;
+		top: 100px;
+	}
+	.branding-section-right .brand-mynd img {
+		width: 100%;
+		height: auto;
+	}
+
+	/********************* ICON *********************/
+	.icon-section {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	.icon-holder {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	.icon {
+		margin: 32px 0;
+	}
+	.icon img {
+		margin-bottom: 24px;
+	}
+	/********************* PÓSTUR *********************/
+	.postlisti {
+		margin: 40px auto;
+		max-width: 350px;
+	}
+	.postlistaskraning {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 32px;
+	}
+	.postlistaskraning input {
+		width: 100%;
+		height: 56px;
+		text-indent: 18px;
+		font-size: 14px;
+	}
+	.btn-postur {
+		width: 160px;
+		height: 56px;
+		font-size: 16px;
+		margin-top: 24px;
+	}
+	
+	/********************* NÁMSKEIÐ *********************/
+
+	.filter-namskeid {
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.namsk-info-container {
+		width: 90%;
+	}
+	.two-columns {
+		width: 85%;
+		flex-direction: column;
+	}
+	.namsk-info, .namsk-texti {
+		width: 100%;
+	}
+	.namsk-texti {
+		margin: 24px 0 0 0;
+	}
+	
+	.namsk-info-container {
+		width: 90%;
+		display: flex;
+		padding: 24px 0;
+	}
+
+	/********************* KENNARAR *********************/
+	.card-holder {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	.card-holder .card-kennari:nth-child(4n){
+		margin: 0 auto 24px;
+	}
+	.card-holder .card-kennari {
+		margin: 0 auto;
+	}
+	.skraning {
+		width: 90%;
+	}
+	.btn-skraning {
+		width: 280px;
+		height: 56px;
+		font-size: 16px;
+		margin: 32px auto;
+	}
+	/********************* BRANDING *********************/
+
+	.branding-section-right .brand-mynd {
+		height: 400px;
+		width: auto;
+		right: 0px;
+	}
+	.branding-section-right .brand-texti {
+		position: absolute;
+		left: 24px;
+		top: 190px;
+	}
+	.skraut-texti {
+		line-height: 32px;
+		font-size: 40px;
+		color: #8C288C;
+	}
+	.branding-section-left .brand-mynd img {
+		height: auto;
+		width: 400px;
+	}
+	.branding-section-left .brand-texti {
+		position: absolute;
+		left: 24px;
+		top: 190px;
+	}
+	.branding-section-left .brand-mynd {
+		height: 450px;
+	}
+
+	/********************* FOOTER *********************/
+	
+	.footer-container {
+		height: auto;
+		margin: 0 auto;
+		background-color: #8C288C;
+		align-items: center;
+	}
+	.footer_content_container {
+		max-width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 48px;
+		margin: 0 auto;
+	}
+	.footer-content-1, .footer-content-2, .footer-content-3, 
+	.footer-content-4, .footer-content-5 {
+		display: flex;
+		flex-direction: column;
+		margin: 24px auto;
+		text-align: center;
+	}
+	.footer-content-2 {
+		width: auto;
+		height: 80%;
+	}
+	.footer-content-5 img {
+		margin: 24px auto 48px;
+	}
+
+
+	
+
+
+
+
+}
+

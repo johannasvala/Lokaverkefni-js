@@ -2,7 +2,7 @@ var templates = {
     header: `
         <nav class="top-nav">
             <div class="top-nav-content">
-                <img src="images/jogasetrid-logo-fjolublatt.svg" alt="Jógasetrið lógó"/>
+                <img src="images/jogasetrid-logo-fjolublatt.svg" alt="Jógasetrið lógó" id="logo"/>
                 <ul class="nav-list">
                     <li><a href="#" id="jogatimar" alt="jógatímar">Jógatímar</a></li>
                     <li><a href="#" id="kennaranam" alt="kennaranám">Kennaranám</a></li>
@@ -69,9 +69,9 @@ var templates = {
         
         <div class="hamburger-container">
             <div class="burgerContainer">
-                <div class="burger"></div>
-                <div class="burger"></div>
-                <div class="burger"></div>
+                <div class="burger" id="change1"></div>
+                <div class="burger" id="change2"></div>
+                <div class="burger" id="change3"></div>
             </div>
         </div>
 
@@ -94,15 +94,7 @@ var templates = {
         <section class="stundaskra">
             <h2>Stundaskrá</h2>
             <div class="vikudagar">
-                <ul>
-                    <li class="active">Mánudagur</li>
-                    <li>Þriðjudagur</li>
-                    <li>Miðvikudagur</li>
-                    <li>Fimmtudagur</li>
-                    <li>Föstudagur</li>
-                    <li>Laugardagur</li>
-                    <li>Sunnudagur</li>
-                </ul>
+                <ul id="vikudagar"></ul>
             </div>
             <div class="stundaskra-forsida-container">
                 <table>
@@ -114,47 +106,11 @@ var templates = {
                             <th>UPPLÝSINGAR</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>6:30 - 7:30</td>
-                            <td class="timi_typa">Kundalinijóga</th>
-                            <td>Gunnar</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
-                        <tr>
-                            <td>10:15 - 11:30</td>
-                            <td class="timi_typa">Mömmujóga</th>
-                            <td>Auður</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 - 13:15</td>
-                            <td class="timi_typa">Meðgöngujóga</th>
-                            <td>Auður</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
-                        <tr>
-                            <td>17:15 - 18:30</td>
-                            <td class="timi_typa">Hathajóga</th>
-                            <td>Gerða</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
-                        <tr>
-                            <td>18:45 - 20:00</td>
-                            <td class="timi_typa">Grunnnámskeið</th>
-                            <td>Auður</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
-                        <tr>
-                            <td>20:15 - 21:15</td>
-                            <td class="timi_typa">Karlajóga</th>
-                            <td>Birgir</td>
-                            <td class="skoda_nanar">SKOÐA</td>
-                        </tr>
+                    <tbody id="stundaskraListi">
                     </tbody>
                 </table>
             </div>
-                <a href="#" class="btn" alt="sjá alla vikuna">VIKAN</a>
+                <a href="#" class="btn" id="vikanBtn"alt="sjá alla vikuna">VIKAN</a>
         </section>
 
         <div class="divider"></div> <!-- SÉST EKKI!!!!! -->
@@ -164,58 +120,11 @@ var templates = {
         <section class="cards-namskeid">
             <h2>Opnir tímar & námskeið</h2>
             <div class="card-holder">
-                <div class="card">
-                    <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                    <img src="images/kundalinijoga.png" alt="kona í jógastöðu"/>
-                    <div class="card-text-holder">
-                        <h3>KUNDALINIJÓGA</h3>
-                        <p>Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og ...</p>
-                        <div class="btn-holder">
-                            <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                            <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                    <img src="images/medgongujoga.png" alt="konur í meðgöngujóga"/>
-                    <div class="card-text-holder">
-                        <h3>MEÐGÖNGUJÓGA</h3>
-                        <p>í Meðgöngujóga leggjum við áherslu á  öndun,  teygjur,  styrkjandi æfingar  og slökun. Djúp öndun og slökun er ...</p>
-                        <div class="btn-holder">
-                            <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                            <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                    <img src="images/mommujoga.png" alt="kona með barn í meðgöngujóga"/>
-                    <div class="card-text-holder">
-                        <h3>MÖMMUJÓGA</h3>
-                        <p>Mömmujóga er námskeið þar sem mæður og börn stunda mjúka og styrkjandi en jafnframt skemmtilega...</p>
-                        <div class="btn-holder">
-                            <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                            <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                    <img src="images/hathajoga.png" alt="kona í jógastöðu"/>
-                    <div class="card-text-holder">
-                        <h3>HATHAJÓGA</h3>
-                        <p>HATHA er ein þekktasta tegund jóga á vesturlöndunum. HA þýðir sól og THA þýðir máni. Unnið er með ...</p>
-                        <div class="btn-holder">
-                            <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                            <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                        </div>
-                    </div>
-                </div> 
+                
 
             </div> <!-- class="card-holder" -->
 
-            <a href="#" class="btn" alt="sjá alla tíma">ALLIR TÍMAR</a>
+            <a href="#" class="btn" id="allirTimarFrontPage" alt="sjá alla tíma">ALLIR TÍMAR</a>
         </section> <!-- class="cards-namskeid" -->
 
         <div class="divider"></div>
@@ -253,6 +162,7 @@ var templates = {
 
         <div class="divider"></div>
 
+
         </div> <!-- class="container" -->
     `,
     jogatimar: `
@@ -262,184 +172,17 @@ var templates = {
                 <h2>Opnir tímar & námskeið</h2>
                 <div class="filter-namskeid">
                     <div>
-                        <p class="active">ALLIR TÍMAR</p>
+                        <p class="timarFilter active" id="allirTimar">ALLIR TÍMAR</p>
                     </div>
                     <div>
-                        <p class="active">OPNIR TÍMAR</p>
+                        <p class="timarFilter" id="opnirTimar">OPNIR TÍMAR</p>
                     </div>
                     <div>
-                        <p class="active">LOKUÐ NÁMSKEIÐ</p>
+                        <p class="timarFilter" id="lokudNamskeid">LOKUÐ NÁMSKEIÐ</p>
                     </div>
                 </div>
-                <div class="card-holder">
-                    <div class="card" id="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/kundalinijoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>KUNDALINIJÓGA</h3>
-                            <p>Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og ...</p>
-                            <div class="btn-holder">
-                                <a href="#" id="kundalinijóga" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/medgongujoga.png" alt="konur í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MEÐGÖNGUJÓGA</h3>
-                            <p>í Meðgöngujóga leggjum við áherslu á  öndun,  teygjur,  styrkjandi æfingar  og slökun. Djúp öndun og slökun er ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/mommujoga.png" alt="kona með barn í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MÖMMUJÓGA</h3>
-                            <p>Mömmujóga er námskeið þar sem mæður og börn stunda mjúka og styrkjandi en jafnframt skemmtilega...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/hathajoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>HATHAJÓGA</h3>
-                            <p>HATHA er ein þekktasta tegund jóga á vesturlöndunum. HA þýðir sól og THA þýðir máni. Unnið er með ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/kundalinijoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>KUNDALINIJÓGA</h3>
-                            <p>Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/medgongujoga.png" alt="konur í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MEÐGÖNGUJÓGA</h3>
-                            <p>í Meðgöngujóga leggjum við áherslu á  öndun,  teygjur,  styrkjandi æfingar  og slökun. Djúp öndun og slökun er ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/mommujoga.png" alt="kona með barn í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MÖMMUJÓGA</h3>
-                            <p>Mömmujóga er námskeið þar sem mæður og börn stunda mjúka og styrkjandi en jafnframt skemmtilega...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/hathajoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>HATHAJÓGA</h3>
-                            <p>HATHA er ein þekktasta tegund jóga á vesturlöndunum. HA þýðir sól og THA þýðir máni. Unnið er með ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/kundalinijoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>KUNDALINIJÓGA</h3>
-                            <p>Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/medgongujoga.png" alt="konur í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MEÐGÖNGUJÓGA</h3>
-                            <p>í Meðgöngujóga leggjum við áherslu á  öndun,  teygjur,  styrkjandi æfingar  og slökun. Djúp öndun og slökun er ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/mommujoga.png" alt="kona með barn í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MÖMMUJÓGA</h3>
-                            <p>Mömmujóga er námskeið þar sem mæður og börn stunda mjúka og styrkjandi en jafnframt skemmtilega...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/hathajoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>HATHAJÓGA</h3>
-                            <p>HATHA er ein þekktasta tegund jóga á vesturlöndunum. HA þýðir sól og THA þýðir máni. Unnið er með ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card">
-                        <p class="opid">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/kundalinijoga.png" alt="kona í jógastöðu"/>
-                        <div class="card-text-holder">
-                            <h3>KUNDALINIJÓGA</h3>
-                            <p>Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="lokad">OPIÐ</p> <!-- muna z-index -->
-                        <img src="images/medgongujoga.png" alt="konur í meðgöngujóga"/>
-                        <div class="card-text-holder">
-                            <h3>MEÐGÖNGUJÓGA</h3>
-                            <p>í Meðgöngujóga leggjum við áherslu á  öndun,  teygjur,  styrkjandi æfingar  og slökun. Djúp öndun og slökun er ...</p>
-                            <div class="btn-holder">
-                                <a href="#" alt="skoða kundalinijóga">SKOÐA</a>
-                                <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-holder" id="card-holder">
+                    
                 </div> <!-- class="card-holder" -->
             </section> <!-- class="cards-namskeid" -->
 
@@ -463,7 +206,7 @@ var templates = {
                         <div class="divider-small"></div>
                         <p>Dýnur, teppi og koddar á staðnum</p>
                         <div class="btn-holder">
-                            <button class="skra" onclick="alert('Hello world!')">SKRÁ MIG</button>
+                            <button class="skra" onclick="alert('Hér á að koma modal gluggi með skráningar útskýringum')">SKRÁ MIG</button>
                             <a href="#" alt="skoða kundalinijóga">STUNDASKRÁ</a>
                         </div>
                     </div>
@@ -532,114 +275,12 @@ var templates = {
             <section class="cards-namskeid">
                 <div class="postlisti-info-holder">
                     <h2>Kennarar í Jógasetrinu</h2>
-                    <h4>Í Jógasetrinu er fjölbreytta stundarskrá.  Það er velkomið að blanda saman Kundalini, Hatha, Mjúku Jóga og Jóga Nidra til að fá styrk, kjark, áræðni, mýkt og djúpa slökun inn í lífið.  Einnig úrval af lokuðum námskeiðum. Frábærir kennarar deila reynslu sinni og þekkingu.</h4>
+                    <h4>Í Jógasetrinu er fjölbreytt stundarskrá.  Það er velkomið að blanda saman Kundalini, Hatha, Mjúku Jóga og Jóga Nidra til að fá styrk, kjark, áræðni, mýkt og djúpa slökun inn í lífið.  Einnig úrval af lokuðum námskeiðum. Frábærir kennarar deila reynslu sinni og þekkingu.</h4>
                 </div>
-                <div class="card-holder">
-                    <div class="card-kennari" id="cardKennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
-                    <div class="card-kennari">
-                        <img src="images/audur.png" alt="kona í jógastöðu"/>
-                        <div class="card-kennari-text-holder">
-                            <h5>Auður Bjarnadóttir</h5>
-                            <p>Kundalini jóga, Meðgöngujóga, Mömmujóga, Hatha jóga og Jóga Nidra</p>
-                        </div>
-                    </div>
+
+                <div class="card-holder" id="card-holder">
+                    
+
 
                 </div> <!-- class="card-holder" -->
             </section> <!-- class="cards-namskeid" -->
@@ -647,12 +288,23 @@ var templates = {
     `,
     postListi: `
         <section class="postlisti">
+            <div id="modalContainer">
+                <div id="modalGluggiPostur">
+                    <div class="infoHolderPostur">
+                        <img src="images/prufa-icon.svg" />
+                        <h3>Takk fyrir skráninguna (nafn notanda)!</h3>
+                        <H4>Þú ert núna skráð/ur á póstlista Jógasetursins</H4>
+                        <li class="btn" id="ok-takki"alt="loka">OK</li>
+                    </div> 
+                </div>
+            </div>
             <div class="postlisti-info-holder">
                 <h2>Póstlisti Jógasetursins</h2>
                 <h4>Skráðu þig á póstlistann okkar og fáðu fréttir af reglulegum viðburðum. 
                 Einnig sendum við út mikilvægar tilkynningar til viðskiptavina.</h4>
                 <div class="postlistaskraning">
-                    <input type="text" name="email" placeholder="Skráðu netfangið þitt hérna">
+                    <input type="text" name="name" class="input-nafn" placeholder="Nafn">
+                    <input type="text" name="email" class="input-netfang" placeholder="Netfang">
                     <button type="button" class="btn-postur">SKRÁ MIG</button>
                 </div>
             </div>

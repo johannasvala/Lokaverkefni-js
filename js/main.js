@@ -154,10 +154,30 @@ allirTimar.onclick = function(){
 
 //HAMBORGARAMENU
 
-var burger = document.querySelector(".burgerContainer");
-var menu = document.querySelector(".hamburgermenu");
+var toggleHamburgerMenu = function(){
 
-burger.onclick = function(){
-    console.log('hamborgari')
-    menu.style.display = 'block';
+    var burgerOpen = document.querySelector(".burgerContainer");
+    var menu = document.querySelector(".hamburgermenu");
+    var burgerClose = document.querySelector(".burgerCloseContainer");
+
+    if(burgerOpen.classList.contains("active")){
+        menu.style.display = 'flex';
+        burgerClose.style.display = 'block';
+        burgerOpen.style.display = 'none';
+        burgerOpen.classList.remove("active")
+    } else {
+        menu.style.display = 'none';
+        burgerClose.style.display = 'none';
+        burgerOpen.style.display = 'flex';
+        burgerOpen.classList.add("active")
+    }
+
 }
+
+var burgerOpen = document.querySelector(".burgerContainer");
+var burgerClose = document.querySelector(".burgerCloseContainer");
+
+burgerOpen.onclick = toggleHamburgerMenu
+burgerClose.onclick = toggleHamburgerMenu
+
+

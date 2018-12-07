@@ -1,17 +1,24 @@
-var showJogatimar = document.getElementById("jogatimar");
-// var showJogatimar = document.getElementById("vikanBtn");
+var showJogatimar = document.querySelectorAll("#jogatimar");
 
-showJogatimar.onclick = function(){
-    console.log('show jogatimar!')
-    main.innerHTML = templates.jogatimar;
-    window.scrollTo(0,0)
+console.log(showJogatimar)
 
-    var containerinn = document.querySelector(`.container`);
-    containerinn.innerHTML += templates.skraning;
-    containerinn.innerHTML += templates.iconSection;
-    containerinn.innerHTML += templates.postListi;
-
-    renderYogaCards()
+for(var i = 0; i < showJogatimar.length; i++){
+    showJogatimar[i].onclick = function(){
+        console.log('show jogatimar!')
+        main.innerHTML = templates.jogatimar;
+        window.scrollTo(0,0)
+    
+        var containerinn = document.querySelector(`.container`);
+        containerinn.innerHTML += templates.skraning;
+        containerinn.innerHTML += templates.iconSection;
+        containerinn.innerHTML += templates.postListi;
+    
+        renderYogaCards();
+        initModal();
+        if(window.innerWidth < 500){
+            toggleHamburgerMenu()
+        }
+    }
 }
 
 function renderYogaCards(){
@@ -33,9 +40,6 @@ function renderYogaCards(){
         var oldActive = document.querySelector('.timarFilter.active');
         oldActive.classList.remove("active");
 
-
-
-        
         e.target.classList.toggle('active')
 
         addCards.innerHTML = ""; //Þetta byrjar á því að tæma öll card-in
@@ -60,7 +64,7 @@ function renderYogaCards(){
                     <h3>${namskeid[i].heiti}</h3>
                     <p>${namskeid[i].texti}</p>
                     <div class="btn-holder">
-                        <a onClick="renderSingleYogaClass(${i})" id="kundalinijóga" alt="skoða kundalinijóga">SKOÐA</a>
+                        <a type="button" onClick="renderSingleYogaClass(${i})" id="kundalinijóga" alt="skoða kundalinijóga">SKOÐA</a>
                         <button class="skra" onclick="alert('Hello world!')">SKRÁ</button>
                     </div>
                 </div>

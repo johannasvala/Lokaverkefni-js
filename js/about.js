@@ -1,16 +1,25 @@
-var showJogasetrid = document.getElementById("jogasetrid");
+var showJogasetrid = document.querySelectorAll("#jogasetrid");
 
-showJogasetrid.onclick = function(){
-    main.innerHTML = templates.about; 
-    window.scrollTo(0,0);
-
-    var containerinn = document.querySelector(`.container`);
-    containerinn.innerHTML += templates.skraning;
-    containerinn.innerHTML += templates.postListi;
+for(var i = 0; i < showJogasetrid.length; i++){
+    showJogasetrid[i].onclick = function(){
+        main.innerHTML = templates.about; 
+        window.scrollTo(0,0);
     
-    renderTeacherCards()
-    initModal();
+        var containerinn = document.querySelector(`.container`);
+        containerinn.innerHTML += templates.skraning;
+        containerinn.innerHTML += templates.postListi;
+        
+        renderTeacherCards()
+        initModal();
+
+        if(window.innerWidth < 500){
+            toggleHamburgerMenu()
+        }
+    }
+
 }
+
+
 
 // Hér kemur lúppan fyrir kennarana
 

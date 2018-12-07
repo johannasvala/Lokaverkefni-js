@@ -117,6 +117,10 @@ p {
 	background-color: #8C288C;
 	padding: 15%;
 	display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 .hamburgermenu-logo-container {
 	display: flex;
@@ -160,6 +164,9 @@ p {
 	line-height: 48px;
 	font-weight: 600;
 	font-size: 16px;
+}
+.burgerCloseContainer {
+	display: none;
 }
 /********************** HAMBORGARAMENU ENDAR **********************/
 
@@ -394,6 +401,7 @@ table tbody tr {
 	font-size: 14px;
 	font-weight: 600;
 	margin-top: 32px;
+	background-color: inherit;
 	border: 0.5px solid #AA623C;
 	color: #AA623C;
 }
@@ -797,14 +805,13 @@ table tbody tr {
 .modalGluggi .infoHolder {
 	display: flex;
 	align-items: center;
-	margin: 48px auto 0;
+	margin: 48px auto;
 	width: 85%;
 	height: 85%;
 	justify-content: space-between;
 
 }
 .modalGluggi img {
-	height: auto;
 	width: 40%;
 }
 .modalGluggi .modalText {
@@ -887,7 +894,10 @@ table tbody tr {
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		z-index: 2;
+		z-index: 1000;
+	}
+	.burgerCloseContainer {
+		display: none;
 	}
 	.burger {
 		width: 18px;
@@ -1127,6 +1137,30 @@ table tbody tr {
 		font-size: 16px;
 		margin: 32px auto;
 	}
+	/********************* KENNARAR MODAL *********************/
+
+	.modalGluggi {
+		width: 90%;
+		height: 850px;
+		overflow: scroll;
+	}
+	.modalGluggi .infoHolder {
+		flex-direction: column;
+		align-items: left;
+		width: 90%;
+		margin: 32px auto;
+		justify-content: flex-start;
+	}
+	.modalGluggi img {
+		width: 100%;
+
+	}
+	.modalGluggi .modalText {
+		height: auto;
+		width: 100%;
+		margin: 24px 0;
+	}
+
 	/********************* BRANDING *********************/
 
 	.branding-section-right .brand-mynd {

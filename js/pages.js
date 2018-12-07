@@ -16,6 +16,39 @@ var templates = {
             <!-- <input placeholder="Hverju ert þú að leita að?"> -->			
             </div>
         </nav>
+        <div class="hamburgermenu">
+            <div class="hamburgermenu-logo-container">
+                    <img src="images/jogasetrid-logo-hvitt.svg" alt="Jógasetrið lógó"/>
+            </div>
+            <div class="hamburgermenu-leit">
+                    <input placeholder="Leit">
+                    <div class="leit-container">
+                        <img src="images/leit.svg" alt="leit"> 
+                    </div>
+            </div>
+            <div class="hamburgermenu-content">
+                <ul class="nav-list">
+                    <li><a href="#" id="jogatimar" alt="jógatímar">Jógatímar</a></li>
+                    <li><a href="#" id="kennaranam" alt="kennaranám">Kennaranám</a></li>
+                    <li><a href="#" id="stundaskra" alt="stundaskrá">Stundaskrá</a></li>
+                    <li><a href="#" id="verdskra" alt="verðskrá">Verðskrá</a></li>
+                    <li><a href="#" id="jogasetrid" alt="jógasetrið">Jógasetrið</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="hamburger-container"><img class="hamburger" src="images/hamborgari.svg" alt="menu" title="hamburger"></div> -->
+        
+        <div class="hamburger-container">
+            <div class="burgerCloseContainer">
+                <img src="images/hamborgari_loka.svg" alt="loka menu"/>
+            </div>
+            <div class="burgerContainer active">
+                <div class="burger" id="change1"></div>
+                <div class="burger" id="change2"></div>
+                <div class="burger" id="change3"></div>
+            </div>
+        </div>
     `,
     footer: `
         <div class="footer-container">
@@ -44,36 +77,7 @@ var templates = {
     forsida: `
         <div class="container">
                 
-        <div class="hamburgermenu">
-            <div class="hamburgermenu-logo-container">
-                    <img src="images/jogasetrid-logo-hvitt.svg" alt="Jógasetrið lógó"/>
-            </div>
-            <div class="hamburgermenu-leit">
-                    <input placeholder="Leit">
-                    <div class="leit-container">
-                        <img src="images/leit.svg" alt="leit"> 
-                    </div>
-            </div>
-            <div class="hamburgermenu-content">
-                <ul class="nav-list">
-                    <li><a href="#" id="jogatimar" alt="jógatímar">Jógatímar</a></li>
-                    <li><a href="#" id="kennaranam" alt="kennaranám">Kennaranám</a></li>
-                    <li><a href="#" id="stundaskra" alt="stundaskrá">Stundaskrá</a></li>
-                    <li><a href="#" id="verdskra" alt="verðskrá">Verðskrá</a></li>
-                    <li><a href="#" id="jogasetrid" alt="jógasetrið">Jógasetrið</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- <div class="hamburger-container"><img class="hamburger" src="images/hamborgari.svg" alt="menu" title="hamburger"></div> -->
         
-        <div class="hamburger-container">
-            <div class="burgerContainer">
-                <div class="burger" id="change1"></div>
-                <div class="burger" id="change2"></div>
-                <div class="burger" id="change3"></div>
-            </div>
-        </div>
 
         <!--Hamborgari - menu endar / BANNER byrjar -->
 
@@ -292,7 +296,7 @@ var templates = {
                 <div id="modalGluggiPostur">
                     <div class="infoHolderPostur">
                         <img src="images/prufa-icon.svg" />
-                        <h3>Takk fyrir skráninguna (nafn notanda)!</h3>
+                        <h3>Takk fyrir skráninguna!</h3>
                         <H4>Þú ert núna skráð/ur á póstlista Jógasetursins</H4>
                         <li class="btn" id="ok-takki"alt="loka">OK</li>
                     </div> 

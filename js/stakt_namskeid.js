@@ -30,7 +30,7 @@ function renderSingleYogaClass(index){
                     <div class="divider-small"></div>
                     <p>Dýnur, teppi og koddar á staðnum</p>
                     <div class="btn-holder">
-                        <button class="skra" onclick="alert('Hello world!')">SKRÁ MIG</button>
+                        <button class="skra" onclick="alert('Hérna verður þér hent inn á ljótan skráningarvef...')">SKRÁ MIG</button>
                         <a href="#" alt="skoða kundalinijóga">STUNDASKRÁ</a>
                     </div>
                 </div>
@@ -64,4 +64,6 @@ function renderSingleYogaClass(index){
         ${templates.postListi}
     </div> <!-- class="container" -->
 `;
+
+initModal();
 }
